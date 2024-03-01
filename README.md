@@ -6,3 +6,5 @@ To connect:
 mysql -P 3307 --protocol=tcp -u root -p
 ```
 Default password is: password
+
+![Diagram](https://github.com/vphatfla/bugetTracking-db/blob/main/resources/diagram.png)
