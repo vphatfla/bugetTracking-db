@@ -10,8 +10,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: test_db
-    # volumes:
-    #   - ./sql-scripts:/docker-entrypoint-initdb.d
+    volumes:
+      - ./sql-scripts:/docker-entrypoint-initdb.d
 
 volumes:
   mysql-data:
