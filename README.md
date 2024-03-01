@@ -3,6 +3,6 @@ Container expose the connection on Port 3307.
 
 To connect:
 ```
-mysql -P 3306 --protocol=tcp -u newuser1 -p
+mysql -P 3307 --protocol=tcp -u root -p
 ```
 Default password is: password
