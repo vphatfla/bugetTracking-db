@@ -7,7 +7,8 @@ ENV MYSQL_ROOT_PASSWORD=password
 ENV MYSQL_DATABASE=test_db
 
 # #copy SQL scripts to docker-entry-point
-# COPY sql-scripts/ /docker-entrypoint-initdb.d/
-
+# COPY sql-scripts/ /docker-entrypoint-init
+COPY ./sql-scripts/ /docker-entrypoint-initdb.d/
 #Expose the MYSQL port
-EXPOSE 3307
+EXPOSE 3306
+

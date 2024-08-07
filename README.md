@@ -1,10 +1,32 @@
-Docker run on PORT 3306 inside Docker container.
-Container expose the connection on Port 3307.
-
-To connect:
+## Build the image
 ```
-mysql -P 3307 --protocol=tcp -u root -p
+docker build -t mysqlctn . 
 ```
-Default password is: password
+This will build the image called mysqlctn. 
+To check the image, run
+```
+docker images
+```
 
-![Diagram](https://github.com/vphatfla/bugetTracking-db/blob/main/resources/diagram.png)
+## Run the image
+```
+docker run -it -p 3306:3306 mysqlctn
+```
+This will map the 3306 map in the container to the localhost 3306
+
+
+### To go to the container bash:
+Get the container id at:
+```
+docker ps
+```
+then 
+```
+docker exec -it <container id> bash
+```
+
+### To access the data base as root inside the container:
+```
+mysql -P 3306 -u root -p
+```
+
